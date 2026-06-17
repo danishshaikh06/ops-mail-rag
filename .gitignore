@@ -1,0 +1,37 @@
+venv
+plan.md
+data
+cleaning/logs
+metadata/logs
+ingestion/logs
+retrieval/logs
+
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Personal docs
+plan.md
+learning.md
+
+# Data managed by DVC
+data/raw/
+data/cleaned/
+data/metadata/
+data/chunks/
+data/embeddings/
+data/evaluation/
+
+# Models
+models/
