@@ -6,6 +6,7 @@ cleaning/logs
 metadata/logs
 ingestion/logs
 retrieval/logs
+S3
 
 
 # Python
