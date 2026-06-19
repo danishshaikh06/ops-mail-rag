@@ -1,0 +1,6 @@
+pandas == 2.3.3
+beautifulsoup4 == 4.15.0
+dotenv == 0.9.9
+yyaml== 0.0.1
+dvc == 3.67.1
+qdrant-client == 1.18.0
