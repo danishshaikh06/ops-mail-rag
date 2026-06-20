@@ -98,16 +98,20 @@ class MetadataExtractionPipeline:
         with open(self.input_path, encoding="utf-8") as infile, \
              open(self.output_path, "w", encoding="utf-8") as outfile:
             for line in infile:
-                line = line.strip()
-                if not line:
+                try:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    email    = json.loads(line)
+                    metadata = self._extract(email)
+                    outfile.write(json.dumps(metadata) + "\n")
+                    total += 1
+                    if metadata["is_system_email"]:
+                        system += 1
+                        logger.debug("System email | id=%s", email.get("id"))
+                except json.JSONDecodeError:
+                    logger.warning("Skipping malformed JSON line")
                     continue
-                email    = json.loads(line)
-                metadata = self._extract(email)
-                outfile.write(json.dumps(metadata) + "\n")
-                total += 1
-                if metadata["is_system_email"]:
-                    system += 1
-                    logger.debug("System email | id=%s", email.get("id"))
 
         logger.info(
             "Metadata extraction complete | total=%d system=%d output=%s",

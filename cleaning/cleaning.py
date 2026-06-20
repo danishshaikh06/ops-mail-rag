@@ -122,9 +122,13 @@ class EmailCleaningPipeline:
         emails = []
         with open(path, encoding="utf-8") as f:
             for line in f:
-                line = line.strip()
-                if line:
-                    emails.append(json.loads(line))
+                try:
+                    line = line.strip()
+                    if line:
+                        emails.append(json.loads(line))
+                except json.JSONDecodeError:
+                    logger.warning("Skipping malformed JSON line")
+                    continue
         return emails
 
     def _deduplicate(self, emails: list[dict]) -> list[dict]:
