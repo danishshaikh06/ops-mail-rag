@@ -5,3 +5,4 @@ yyaml== 0.0.1
 dvc == 3.67.1
 qdrant-client == 1.18.0
 fastembed == 0.8.0
+sentence-transformers == 5.6.0

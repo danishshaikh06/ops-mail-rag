@@ -524,6 +524,6 @@ class EmailScraperPipeline:
 
 if __name__ == "__main__":
     pipeline = EmailScraperPipeline(
-        output_path=Path("C:\\Users\\Omen\\Downloads\\RAG PIPELINE\\data\\raw\\emails_v3.jsonl"),
+        output_path=Path("C:\\Users\\Omen\\Downloads\\RAG PIPELINE\\data\\raw\\emails_v4.jsonl"),
     )
     pipeline.run()
