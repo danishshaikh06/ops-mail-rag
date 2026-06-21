@@ -271,7 +271,7 @@ class MetadataExtractionPipeline:
 
 if __name__ == "__main__":
     pipeline = MetadataExtractionPipeline(
-        input_path=Path("data/raw/emails.jsonl"),
-        output_path=Path("data/metadata/email_metadata.jsonl"),
+        input_path=Path("C:\\Users\\Omen\\Downloads\\RAG PIPELINE\\data\\raw\\emails_v4.jsonl"),
+        output_path=Path("C:\\Users\\Omen\\Downloads\\RAG PIPELINE\\data\\metadata\\email_metadata_v4.jsonl"),
     )
     pipeline.run()

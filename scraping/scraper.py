@@ -31,6 +31,7 @@ from email.header import decode_header
 from email.utils import parseaddr, parsedate_to_datetime
 from pathlib import Path
 
+# pyrefly: ignore [missing-import]
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 

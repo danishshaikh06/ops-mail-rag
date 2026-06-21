@@ -203,7 +203,7 @@ class EmailCleaningPipeline:
 
 if __name__ == "__main__":
     pipeline = EmailCleaningPipeline(
-        input_path=Path("C:\\Users\\Omen\\Downloads\\RAG PIPELINE\\data\\raw\\emails.jsonl"),
-        output_path=Path("C:\\Users\\Omen\\Downloads\\RAG PIPELINE\\data\\cleaned\\cleaned_emails_v2.jsonl"),
+        input_path=Path("C:\\Users\\Omen\\Downloads\\RAG PIPELINE\\data\\raw\\emails_v4.jsonl"),
+        output_path=Path("C:\\Users\\Omen\\Downloads\\RAG PIPELINE\\data\\cleaned\\cleaned_emails_v4.jsonl"),
     )
     pipeline.run()

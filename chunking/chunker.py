@@ -232,8 +232,8 @@ class _SkipRecord(Exception):
 
 if __name__ == "__main__":
     chunker = EmailChunker(
-        cleaned_path=Path("C:\\Users\\Omen\\Downloads\\RAG PIPELINE\\data\\cleaned\\cleaned_emails_v2.jsonl"),
-        metadata_path=Path("C:\\Users\\Omen\\Downloads\\RAG PIPELINE\\data\\metadata\\email_metadata.jsonl"),
-        output_path=Path("C:\\Users\\Omen\\Downloads\\RAG PIPELINE\\data\\processed\\chunks.jsonl"),
+        cleaned_path=Path("C:\\Users\\Omen\\Downloads\\RAG PIPELINE\\data\\cleaned\\cleaned_emails_v4.jsonl"),
+        metadata_path=Path("C:\\Users\\Omen\\Downloads\\RAG PIPELINE\\data\\metadata\\email_metadata_v4.jsonl"),
+        output_path=Path("C:\\Users\\Omen\\Downloads\\RAG PIPELINE\\data\\processed\\chunks_v4.jsonl"),
     )
     chunker.run()
